@@ -1,21 +1,12 @@
-import { Component, Input, NgModule, OnDestroy, OnInit } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { CommonModule } from '@angular/common';
-import { MatInputModule } from '@angular/material/input';
-import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
-import { MatIconModule } from '@angular/material/icon';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { MatChipInputEvent } from '@angular/material/chips';
 import { IssueFormGroup } from '../../../forms/issue-form-group';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
+import { FormControl, FormGroup } from '@angular/forms';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { RepositoryService } from '../../../services/repository.service';
-import { MatSelectModule } from '@angular/material/select';
 import { GithubLabel } from '../../../models/github/github-label';
 import { combineLatest, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { GithubContributor } from '../../../models/github/github-contributor';
 
 @Component({
@@ -111,22 +102,3 @@ export class TopLevelCreatorComponent implements OnInit, OnDestroy {
     this.contributorsGithubControl.reset();
   }
 }
-
-@NgModule({
-  declarations: [TopLevelCreatorComponent],
-  imports: [
-    MatCardModule,
-    MatFormFieldModule,
-    CommonModule,
-    MatInputModule,
-    MatChipsModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatSelectModule,
-    MatAutocompleteModule,
-  ],
-  exports: [TopLevelCreatorComponent],
-})
-export class TopLevelCreatorModule {}

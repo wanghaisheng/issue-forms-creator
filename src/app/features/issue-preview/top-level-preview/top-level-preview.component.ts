@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Input, NgModule, Output } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ErrorMessageModule } from '../../../shared/components/error-message/error-message.component';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-top-level-preview',
@@ -20,10 +18,3 @@ export class TopLevelPreviewComponent {
   @Output()
   scrollToError: EventEmitter<void> = new EventEmitter<void>();
 }
-
-@NgModule({
-  declarations: [TopLevelPreviewComponent],
-  imports: [CommonModule, ErrorMessageModule],
-  exports: [TopLevelPreviewComponent],
-})
-export class TopLevelPreviewModule {}

@@ -1,14 +1,7 @@
-import { Component, NgModule, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { Component, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RepositoryService } from '../../services/repository.service';
 import { Subject } from 'rxjs';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-repository-finder',
@@ -48,19 +41,3 @@ export class RepositoryFinderComponent implements OnDestroy {
     this.repositoryService.reset();
   }
 }
-
-@NgModule({
-  declarations: [RepositoryFinderComponent],
-  imports: [
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatTooltipModule,
-    MatProgressSpinnerModule,
-    CommonModule,
-  ],
-  exports: [RepositoryFinderComponent],
-})
-export class RepositoryFinderModule {}

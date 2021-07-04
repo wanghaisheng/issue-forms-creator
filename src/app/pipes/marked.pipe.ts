@@ -1,4 +1,4 @@
-import { NgModule, Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 import * as marked from 'marked';
 
 @Pipe({
@@ -12,9 +12,3 @@ export class MarkedPipe implements PipeTransform {
     return value;
   }
 }
-
-@NgModule({
-  declarations: [MarkedPipe],
-  exports: [MarkedPipe],
-})
-export class MarkedModule {}

@@ -1,8 +1,6 @@
-import { Component, Input, NgModule } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MarkdownSection } from '../../../models/markdown-section';
-import { CommonModule } from '@angular/common';
-import { MarkedModule } from '../../../pipes/marked.pipe';
 
 @Component({
   selector: 'app-markdown-preview',
@@ -16,10 +14,3 @@ export class MarkdownPreviewComponent {
     return this.formGroup.value as MarkdownSection;
   }
 }
-
-@NgModule({
-  declarations: [MarkdownPreviewComponent],
-  imports: [CommonModule, MarkedModule],
-  exports: [MarkdownPreviewComponent],
-})
-export class MarkdownPreviewModule {}

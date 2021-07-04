@@ -1,4 +1,20 @@
 <p align="center">
+  Experiment : remove scams
+</p>
+
+output of ng build :
+
+```shell
+Initial Chunk Files               | Names         |      Size
+main.1d5702ec807953196b36.js      | main          | 823.84 kB
+styles.45dbd22714606b1c160e.css   | styles        |  84.31 kB
+polyfills.7f7af78c0835d6eb7712.js | polyfills     |  35.96 kB
+runtime.5027eead3884e59b66ca.js   | runtime       |   1.04 kB
+
+                                  | Initial Total | 945.15 kB
+```
+
+<p align="center">
  <img width="20%" height="20%" src="./src/assets/svg/logo.svg" alt="project logo">
 </p>
 

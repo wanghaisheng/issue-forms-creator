@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Input, NgModule, Output } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-error-message',
@@ -17,10 +15,3 @@ export class ErrorMessageComponent {
   @Output()
   scrollToError: EventEmitter<void> = new EventEmitter<void>();
 }
-
-@NgModule({
-  declarations: [ErrorMessageComponent],
-  imports: [CommonModule, MatIconModule],
-  exports: [ErrorMessageComponent],
-})
-export class ErrorMessageModule {}

@@ -1,19 +1,6 @@
-import { Component, EventEmitter, Input, NgModule, Output } from '@angular/core';
-import { TopLevelPreviewModule } from './top-level-preview/top-level-preview.component';
-import { CdkDragDrop, DragDropModule } from '@angular/cdk/drag-drop';
-import { FormArray, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
-import { CheckboxesPreviewModule } from './checkboxes-preview/checkboxes-preview.component';
-import { DropdownPreviewModule } from './dropdown-preview/dropdown-preview.component';
-import { InputPreviewModule } from './input-preview/input-preview.component';
-import { MarkdownPreviewModule } from './markdown-preview/markdown-preview.component';
-import { TextareaPreviewModule } from './textarea-preview/textarea-preview.component';
-import { OptionPreviewModule } from './option-preview/option-preview.component';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatButtonModule } from '@angular/material/button';
-import { ErrorMessageModule } from '../../shared/components/error-message/error-message.component';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import { FormArray, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-issue-preview',
@@ -74,26 +61,3 @@ export class IssuePreviewComponent {
     return errorList;
   }
 }
-
-@NgModule({
-  declarations: [IssuePreviewComponent],
-  imports: [
-    TopLevelPreviewModule,
-    ReactiveFormsModule,
-    CommonModule,
-    DragDropModule,
-    MatIconModule,
-    CheckboxesPreviewModule,
-    DropdownPreviewModule,
-    InputPreviewModule,
-    MarkdownPreviewModule,
-    TextareaPreviewModule,
-    OptionPreviewModule,
-    MatButtonToggleModule,
-    MatTooltipModule,
-    MatButtonModule,
-    ErrorMessageModule,
-  ],
-  exports: [IssuePreviewComponent],
-})
-export class IssuePreviewModule {}

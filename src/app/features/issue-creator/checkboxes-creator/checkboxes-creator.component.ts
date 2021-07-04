@@ -1,22 +1,7 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  NgModule,
-  Output,
-  QueryList,
-  ViewChildren,
-} from '@angular/core';
-import { CdkDragDrop, DragDropModule } from '@angular/cdk/drag-drop';
-import { FormArray, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { CommonModule } from '@angular/common';
-import { ListOptionComponent, ListOptionModule } from '../list-option/list-option.component';
+import { Component, EventEmitter, Input, Output, QueryList, ViewChildren } from '@angular/core';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import { FormArray, FormGroup } from '@angular/forms';
+import { ListOptionComponent } from '../list-option/list-option.component';
 
 @Component({
   selector: 'app-checkboxes-creator',
@@ -64,21 +49,3 @@ export class CheckboxesCreatorComponent {
     setTimeout(() => this.optionsComp.last.focus());
   }
 }
-
-@NgModule({
-  declarations: [CheckboxesCreatorComponent],
-  imports: [
-    MatButtonModule,
-    MatChipsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    DragDropModule,
-    MatIconModule,
-    MatCheckboxModule,
-    CommonModule,
-    ListOptionModule,
-  ],
-  exports: [CheckboxesCreatorComponent],
-})
-export class CheckboxesCreatorModule {}

@@ -1,17 +1,5 @@
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  Input,
-  NgModule,
-  Output,
-  ViewChild,
-} from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-list-option',
@@ -38,10 +26,3 @@ export class ListOptionComponent {
     this.input.nativeElement.focus();
   }
 }
-
-@NgModule({
-  declarations: [ListOptionComponent],
-  imports: [MatIconModule, MatButtonModule, ReactiveFormsModule, DragDropModule, CommonModule],
-  exports: [ListOptionComponent],
-})
-export class ListOptionModule {}

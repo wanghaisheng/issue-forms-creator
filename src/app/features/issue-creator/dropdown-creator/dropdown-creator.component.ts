@@ -1,23 +1,8 @@
-import {
-  Component,
-  Input,
-  NgModule,
-  OnDestroy,
-  OnInit,
-  QueryList,
-  ViewChildren,
-} from '@angular/core';
-import { MatChipsModule } from '@angular/material/chips';
-import { FormArray, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatIconModule } from '@angular/material/icon';
-import { CdkDragDrop, DragDropModule } from '@angular/cdk/drag-drop';
+import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { CommonModule } from '@angular/common';
-import { ListOptionComponent, ListOptionModule } from '../list-option/list-option.component';
-import { MatButtonModule } from '@angular/material/button';
+import { ListOptionComponent } from '../list-option/list-option.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -105,21 +90,3 @@ export class DropdownCreatorComponent implements OnInit, OnDestroy {
     });
   }
 }
-
-@NgModule({
-  declarations: [DropdownCreatorComponent],
-  imports: [
-    MatChipsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCheckboxModule,
-    MatIconModule,
-    DragDropModule,
-    CommonModule,
-    ListOptionModule,
-    MatButtonModule,
-  ],
-  exports: [DropdownCreatorComponent],
-})
-export class DropdownCreatorModule {}

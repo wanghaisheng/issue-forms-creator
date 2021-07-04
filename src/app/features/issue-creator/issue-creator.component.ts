@@ -3,32 +3,14 @@ import {
   Component,
   ElementRef,
   Input,
-  NgModule,
   QueryList,
   ViewChild,
   ViewChildren,
 } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
-import { CommonModule } from '@angular/common';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatIconModule } from '@angular/material/icon';
-import { MatAccordion, MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
-import { MatMenuModule } from '@angular/material/menu';
-import { MarkdownCreatorModule } from './markdown-creator/markdown-creator.component';
-import { TextareaCreatorModule } from './textarea-creator/textarea-creator.component';
-import { InputCreatorModule } from './input-creator/input-creator.component';
-import { DropdownCreatorModule } from './dropdown-creator/dropdown-creator.component';
-import { CheckboxesCreatorModule } from './checkboxes-creator/checkboxes-creator.component';
+import { MatAccordion, MatExpansionPanel } from '@angular/material/expansion';
 import { IssueFormGroup } from '../../forms/issue-form-group';
-import { FormArray, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { TopLevelCreatorModule } from './top-level-creator/top-level-creator.component';
-import { RepositoryFinderModule } from '../repository-finder/repository-finder.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { ErrorMessageModule } from '../../shared/components/error-message/error-message.component';
-import { CdkDragDrop, DragDropModule } from '@angular/cdk/drag-drop';
+import { FormArray, FormGroup } from '@angular/forms';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-issue-creator',
@@ -147,31 +129,3 @@ export class IssueCreatorComponent implements AfterViewInit {
     formArray.setControl(toIndex, item);
   }
 }
-
-@NgModule({
-  declarations: [IssueCreatorComponent],
-  imports: [
-    MatFormFieldModule,
-    MatCardModule,
-    CommonModule,
-    MatChipsModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatMenuModule,
-    MarkdownCreatorModule,
-    TextareaCreatorModule,
-    InputCreatorModule,
-    DropdownCreatorModule,
-    CheckboxesCreatorModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatButtonModule,
-    TopLevelCreatorModule,
-    RepositoryFinderModule,
-    MatToolbarModule,
-    ErrorMessageModule,
-    DragDropModule,
-  ],
-  exports: [IssueCreatorComponent],
-})
-export class IssueCreatorModule {}

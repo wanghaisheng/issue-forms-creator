@@ -1,9 +1,6 @@
-import { Component, EventEmitter, Input, NgModule, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CheckboxesSection } from '../../../models/checkboxes-section';
 import { FormGroup } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { MarkedModule } from '../../../pipes/marked.pipe';
-import { ErrorMessageModule } from '../../../shared/components/error-message/error-message.component';
 
 @Component({
   selector: 'app-checkboxes-preview',
@@ -20,10 +17,3 @@ export class CheckboxesPreviewComponent {
     return this.formGroup.value as CheckboxesSection;
   }
 }
-
-@NgModule({
-  declarations: [CheckboxesPreviewComponent],
-  imports: [CommonModule, MarkedModule, ErrorMessageModule],
-  exports: [CheckboxesPreviewComponent],
-})
-export class CheckboxesPreviewModule {}

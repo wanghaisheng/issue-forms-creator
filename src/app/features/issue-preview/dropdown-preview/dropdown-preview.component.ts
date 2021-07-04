@@ -1,9 +1,6 @@
-import { Component, EventEmitter, Input, NgModule, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { DropdownSection } from '../../../models/dropdown-section';
-import { MarkedModule } from '../../../pipes/marked.pipe';
-import { ErrorMessageModule } from '../../../shared/components/error-message/error-message.component';
 
 @Component({
   selector: 'app-dropdown-preview',
@@ -20,10 +17,3 @@ export class DropdownPreviewComponent {
     return this.formGroup.value as DropdownSection;
   }
 }
-
-@NgModule({
-  declarations: [DropdownPreviewComponent],
-  imports: [CommonModule, MarkedModule, ErrorMessageModule],
-  exports: [DropdownPreviewComponent],
-})
-export class DropdownPreviewModule {}

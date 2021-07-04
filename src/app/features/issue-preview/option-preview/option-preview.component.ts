@@ -1,6 +1,4 @@
-import { Component, Input, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatChipsModule } from '@angular/material/chips';
+import { Component, Input } from '@angular/core';
 import { RepositoryService } from '../../../services/repository.service';
 import { Observable } from 'rxjs';
 import { GithubLabel } from '../../../models/github/github-label';
@@ -24,10 +22,3 @@ export class OptionPreviewComponent {
 
   constructor(private readonly repositoryService: RepositoryService) {}
 }
-
-@NgModule({
-  declarations: [OptionPreviewComponent],
-  imports: [CommonModule, MatChipsModule],
-  exports: [OptionPreviewComponent],
-})
-export class OptionPreviewModule {}
