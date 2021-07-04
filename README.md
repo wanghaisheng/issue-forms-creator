@@ -2,6 +2,20 @@
   This branch is a fixed reference for the 'scamless' branch to compare builds
 </p>
 
+output of ng build :
+
+```shell
+Initial Chunk Files               | Names         |      Size
+main.adb7e69dace7168cbea6.js      | main          | 836.71 kB
+styles.45dbd22714606b1c160e.css   | styles        |  84.31 kB
+polyfills.7f7af78c0835d6eb7712.js | polyfills     |  35.96 kB
+runtime.5027eead3884e59b66ca.js   | runtime       |   1.04 kB
+
+                                  | Initial Total | 958.01 kB
+
+Build at: 2021-07-04T09:00:09.228Z - Hash: d8bc1afdb90532c58753 - Time: 40673ms
+```
+
 <p align="center">
  <img width="20%" height="20%" src="./src/assets/svg/logo.svg" alt="project logo">
 </p>
