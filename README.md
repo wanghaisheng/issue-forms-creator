@@ -1,4 +1,8 @@
 <p align="center">
+  This branch is a fixed reference for the 'scamless' branch to compare builds
+</p>
+
+<p align="center">
  <img width="20%" height="20%" src="./src/assets/svg/logo.svg" alt="project logo">
 </p>
 
