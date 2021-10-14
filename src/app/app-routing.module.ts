@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IssueFormComponent } from './features/issue-form/issue-form.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'new',
+    redirectTo: 'edit',
     pathMatch: 'full',
   },
   {
     path: 'new',
-    component: IssueFormComponent,
+    loadChildren: () => import('./features/new-issue/new-issue.module').then(m => m.NewIssueModule),
+  },
+  {
+    path: 'edit',
+    loadChildren: () =>
+      import('./features/edit-issue/edit-issue.module').then(m => m.EditIssueModule),
   },
 ];
 
